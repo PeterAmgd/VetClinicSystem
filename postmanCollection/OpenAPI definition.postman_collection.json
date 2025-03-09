@@ -1,0 +1,2396 @@
+{
+	"info": {
+		"_postman_id": "adf995ab-9492-4e56-8cce-2f33abe577fc",
+		"name": "OpenAPI definition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28976179",
+		"_collection_link": "https://blue-eclipse-871344.postman.co/workspace/2ee96990-40fb-4b54-89ee-367345d150eb/collection/28976179-adf995ab-9492-4e56-8cce-2f33abe577fc?action=share&source=collection_link&creator=28976179"
+	},
+	"item": [
+		{
+			"name": "visits",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "get Visit By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/visits/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"visits",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/visits/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"visits",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"visitDate\": \"<dateTime>\",\n  \"id\": \"<long>\",\n  \"pet\": {\n    \"name\": \"<string>\",\n    \"id\": \"<long>\",\n    \"gender\": \"<string>\",\n    \"dateOfBirth\": \"<date>\",\n    \"animalKind\": \"<string>\",\n    \"photo_path\": \"<string>\",\n    \"weight\": \"<double>\",\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  },\n  \"doctor\": {\n    \"phone\": \"<string>\",\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"bio\": \"<string>\",\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    }\n  },\n  \"clinic\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  },\n  \"owner\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "delete Visit",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/visits/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"visits",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/visits/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"visits",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "get All Visits",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/visits",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"visits"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/visits",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"visits"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"visitDate\": \"<dateTime>\",\n    \"id\": \"<long>\",\n    \"pet\": {\n      \"name\": \"<string>\",\n      \"id\": \"<long>\",\n      \"gender\": \"<string>\",\n      \"dateOfBirth\": \"<date>\",\n      \"animalKind\": \"<string>\",\n      \"photo_path\": \"<string>\",\n      \"weight\": \"<double>\",\n      \"owner\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"gender\": \"<string>\",\n        \"address\": \"<string>\",\n        \"pets\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n          }\n        ]\n      }\n    },\n    \"doctor\": {\n      \"phone\": \"<string>\",\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"photo\": \"<string>\",\n      \"bio\": \"<string>\",\n      \"clinic\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"workingDays\": \"<string>\",\n        \"workingHours\": \"<string>\",\n        \"email\": \"<string>\",\n        \"socialLinks\": \"<string>\",\n        \"doctors\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n          }\n        ]\n      }\n    },\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    },\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  },\n  {\n    \"visitDate\": \"<dateTime>\",\n    \"id\": \"<long>\",\n    \"pet\": {\n      \"name\": \"<string>\",\n      \"id\": \"<long>\",\n      \"gender\": \"<string>\",\n      \"dateOfBirth\": \"<date>\",\n      \"animalKind\": \"<string>\",\n      \"photo_path\": \"<string>\",\n      \"weight\": \"<double>\",\n      \"owner\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"email\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"gender\": \"<string>\",\n        \"address\": \"<string>\",\n        \"pets\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n          }\n        ]\n      }\n    },\n    \"doctor\": {\n      \"phone\": \"<string>\",\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"photo\": \"<string>\",\n      \"bio\": \"<string>\",\n      \"clinic\": {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"address\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"workingDays\": \"<string>\",\n        \"workingHours\": \"<string>\",\n        \"email\": \"<string>\",\n        \"socialLinks\": \"<string>\",\n        \"doctors\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n          }\n        ]\n      }\n    },\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    },\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "update Visit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n  \"visitDate\": \"2024-03-09T14:33:00\",\n  \"pet\": {\n    \"id\": 4\n  },\n  \n    \"owner\": {\n        \"id\":4\n  },\n  \"doctor\": {\n    \"id\": 1\n  },\n  \"clinic\": {\n    \"id\": 1\n    \n  }\n  \n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/visits",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"visits"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"visitDate\": \"<dateTime>\",\n  \"id\": \"<long>\",\n  \"pet\": {\n    \"name\": \"<string>\",\n    \"id\": \"<long>\",\n    \"gender\": \"<string>\",\n    \"dateOfBirth\": \"<date>\",\n    \"animalKind\": \"<string>\",\n    \"photo_path\": \"<string>\",\n    \"weight\": \"<double>\",\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  },\n  \"doctor\": {\n    \"phone\": \"<string>\",\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"bio\": \"<string>\",\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    }\n  },\n  \"clinic\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  },\n  \"owner\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/visits",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"visits"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"visitDate\": \"<dateTime>\",\n  \"id\": \"<long>\",\n  \"pet\": {\n    \"name\": \"<string>\",\n    \"id\": \"<long>\",\n    \"gender\": \"<string>\",\n    \"dateOfBirth\": \"<date>\",\n    \"animalKind\": \"<string>\",\n    \"photo_path\": \"<string>\",\n    \"weight\": \"<double>\",\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  },\n  \"doctor\": {\n    \"phone\": \"<string>\",\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"bio\": \"<string>\",\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    }\n  },\n  \"clinic\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  },\n  \"owner\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "add Visit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"visitDate\": \"2024-03-09T14:30:00\",\n  \"pet\": {\n    \"id\": 4\n  },\n  \n    \"owner\": {\n        \"id\":4\n  },\n  \"doctor\": {\n    \"id\": 1\n  },\n  \"clinic\": {\n    \"id\": 1\n    \n  }\n  \n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/visits",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"visits"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"visitDate\": \"<dateTime>\",\n  \"id\": \"<long>\",\n  \"pet\": {\n    \"name\": \"<string>\",\n    \"id\": \"<long>\",\n    \"gender\": \"<string>\",\n    \"dateOfBirth\": \"<date>\",\n    \"animalKind\": \"<string>\",\n    \"photo_path\": \"<string>\",\n    \"weight\": \"<double>\",\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  },\n  \"doctor\": {\n    \"phone\": \"<string>\",\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"bio\": \"<string>\",\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    }\n  },\n  \"clinic\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  },\n  \"owner\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/visits",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"visits"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"visitDate\": \"<dateTime>\",\n  \"id\": \"<long>\",\n  \"pet\": {\n    \"name\": \"<string>\",\n    \"id\": \"<long>\",\n    \"gender\": \"<string>\",\n    \"dateOfBirth\": \"<date>\",\n    \"animalKind\": \"<string>\",\n    \"photo_path\": \"<string>\",\n    \"weight\": \"<double>\",\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  },\n  \"doctor\": {\n    \"phone\": \"<string>\",\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"bio\": \"<string>\",\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    }\n  },\n  \"clinic\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  },\n  \"owner\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "pets",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "get Pet By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/pets/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pets",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/pets/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"name\": \"<string>\",\n  \"id\": \"<long>\",\n  \"gender\": \"<string>\",\n  \"dateOfBirth\": \"<date>\",\n  \"animalKind\": \"<string>\",\n  \"photo_path\": \"<string>\",\n  \"weight\": \"<double>\",\n  \"owner\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "update Pet",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"id\": 4,\n        \"name\": \"doggg\",\n        \"gender\": \"male\",\n        \"dateOfBirth\": \"2020-05-15\",\n        \"animalKind\": \"dog\",\n        \"owner\": {\"id\":4},\n        \"weight\": 12.0\n    }",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/pets/4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pets",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"id\": \"<long>\",\n  \"gender\": \"<string>\",\n  \"dateOfBirth\": \"<date>\",\n  \"animalKind\": \"<string>\",\n  \"photo_path\": \"<string>\",\n  \"weight\": \"<double>\",\n  \"owner\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/pets/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"name\": \"<string>\",\n  \"id\": \"<long>\",\n  \"gender\": \"<string>\",\n  \"dateOfBirth\": \"<date>\",\n  \"animalKind\": \"<string>\",\n  \"photo_path\": \"<string>\",\n  \"weight\": \"<double>\",\n  \"owner\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "delete Pet",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/pets/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pets",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/pets/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "addWithPic",
+					"item": [
+						{
+							"name": "add Pet With Pic",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "pet4",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										},
+										{
+											"key": "dateOfBirth",
+											"value": "2022-02-01",
+											"type": "text"
+										},
+										{
+											"key": "animalKind",
+											"value": "cat",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "owner",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/E:/state.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/pets/addWithPic",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pets",
+										"addWithPic"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"file\": \"<binary>\",\n  \"pet\": {\n    \"name\": \"<string>\",\n    \"id\": \"<long>\",\n    \"gender\": \"<string>\",\n    \"dateOfBirth\": \"<date>\",\n    \"animalKind\": \"<string>\",\n    \"photo_path\": \"<string>\",\n    \"weight\": \"<double>\",\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/pets/addWithPic",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets",
+												"addWithPic"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"name\": \"<string>\",\n  \"id\": \"<long>\",\n  \"gender\": \"<string>\",\n  \"dateOfBirth\": \"<date>\",\n  \"animalKind\": \"<string>\",\n  \"photo_path\": \"<string>\",\n  \"weight\": \"<double>\",\n  \"owner\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "add-pet",
+					"item": [
+						{
+							"name": "add Pet With Out Pic",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"id\": 4,\n        \"name\": \"asjsdahaj\",\n        \"gender\": \"male\",\n        \"dateOfBirth\": \"2020-05-15\",\n        \"animalKind\": \"dog\",\n        \"weight\": 12.0,\n        \"owner\" : {\n            \"id\":4\n            }\n    }",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/pets/add-pet",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pets",
+										"add-pet"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"id\": \"<long>\",\n  \"gender\": \"<string>\",\n  \"dateOfBirth\": \"<date>\",\n  \"animalKind\": \"<string>\",\n  \"photo_path\": \"<string>\",\n  \"weight\": \"<double>\",\n  \"owner\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/pets/add-pet",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets",
+												"add-pet"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"name\": \"<string>\",\n  \"id\": \"<long>\",\n  \"gender\": \"<string>\",\n  \"dateOfBirth\": \"<date>\",\n  \"animalKind\": \"<string>\",\n  \"photo_path\": \"<string>\",\n  \"weight\": \"<double>\",\n  \"owner\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "get All Pets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/pets",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"pets"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/pets",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pets"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"name\": \"<string>\",\n    \"id\": \"<long>\",\n    \"gender\": \"<string>\",\n    \"dateOfBirth\": \"<date>\",\n    \"animalKind\": \"<string>\",\n    \"photo_path\": \"<string>\",\n    \"weight\": \"<double>\",\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  },\n  {\n    \"name\": \"<string>\",\n    \"id\": \"<long>\",\n    \"gender\": \"<string>\",\n    \"dateOfBirth\": \"<date>\",\n    \"animalKind\": \"<string>\",\n    \"photo_path\": \"<string>\",\n    \"weight\": \"<double>\",\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "owners",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "get-pets-with-ownerId",
+							"item": [
+								{
+									"name": "get Owner Pets",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/owners/4/pets",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"owners",
+												"4",
+												"pets"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/owners/:id/pets",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"owners",
+														":id",
+														"pets"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"name\": \"<string>\",\n    \"id\": \"<long>\",\n    \"gender\": \"<string>\",\n    \"dateOfBirth\": \"<date>\",\n    \"animalKind\": \"<string>\",\n    \"photo_path\": \"<string>\",\n    \"weight\": \"<double>\",\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  },\n  {\n    \"name\": \"<string>\",\n    \"id\": \"<long>\",\n    \"gender\": \"<string>\",\n    \"dateOfBirth\": \"<date>\",\n    \"animalKind\": \"<string>\",\n    \"photo_path\": \"<string>\",\n    \"weight\": \"<double>\",\n    \"owner\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"address\": \"<string>\",\n      \"pets\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n        }\n      ]\n    }\n  }\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get Owner By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/owners/4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"owners",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/owners/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"owners",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"address\": \"<string>\",\n  \"pets\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "delete Owner",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/owners/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"owners",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/owners/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"owners",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "get All Owners",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/owners",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"owners"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/owners",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"owners"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"address\": \"<string>\",\n    \"pets\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n      }\n    ]\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "update Owner",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"name\": \"owner2221\",\n    \"email\": \"owner1@g.c\",\n    \"phone\": \"05456877\",\n    \"gender\": \"male\",\n    \"address\": \"cairo\",\n    \"pets\": []\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/owners",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"owners"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"address\": \"<string>\",\n  \"pets\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/owners",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"owners"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"address\": \"<string>\",\n  \"pets\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "add Owner",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"owner1\",\n  \"email\": \"owner1@g.c\",\n  \"phone\": \"05456877\",\n  \"gender\": \"male\",\n  \"address\": \"cairo\"\n  \n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/owners",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"owners"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"address\": \"<string>\",\n  \"pets\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/owners",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"owners"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"address\": \"<string>\",\n  \"pets\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Pet detected>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "doctors",
+			"item": [
+				{
+					"name": "addWithPic",
+					"item": [
+						{
+							"name": "add Doctor With Pic",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ahmed",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "4465464",
+											"type": "text"
+										},
+										{
+											"key": "bio",
+											"value": "asdsadasd",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/E:/state.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/doctors/addWithPic",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"doctors",
+										"addWithPic"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"file\": \"<binary>\",\n  \"doctor\": {\n    \"phone\": \"<string>\",\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"bio\": \"<string>\",\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/doctors/addWithPic",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"doctors",
+												"addWithPic"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"phone\": \"<string>\",\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"bio\": \"<string>\",\n  \"clinic\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "get Doctor By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/doctors/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"doctors",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/doctors/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"doctors",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"phone\": \"<string>\",\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"bio\": \"<string>\",\n  \"clinic\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "delete Doctor",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/doctors/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"doctors",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/doctors/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"doctors",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "get All Doctors",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/doctors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"doctors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/doctors",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"doctors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"phone\": \"<string>\",\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"bio\": \"<string>\",\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    }\n  },\n  {\n    \"phone\": \"<string>\",\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"bio\": \"<string>\",\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    }\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "update Doctor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"ali\",\n    \"phone\": \"1231231\",\n    \"photo\": null,\n    \"bio\": \"asdasdasdasda\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/doctors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"doctors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"phone\": \"<string>\",\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"bio\": \"<string>\",\n  \"clinic\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/doctors",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"doctors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"phone\": \"<string>\",\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"bio\": \"<string>\",\n  \"clinic\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "add Doctor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"phone\": \"1231231\",\n  \n  \"name\": \"aly\",\n  \"bio\": \"asdasdasdasda\"\n  \n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/doctors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"doctors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"phone\": \"<string>\",\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"bio\": \"<string>\",\n  \"clinic\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/doctors",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"doctors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"phone\": \"<string>\",\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"bio\": \"<string>\",\n  \"clinic\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "clinics",
+			"item": [
+				{
+					"name": "{clinicId}",
+					"item": [
+						{
+							"name": "assign and deassign",
+							"item": [
+								{
+									"name": "{doctorId}",
+									"item": [
+										{
+											"name": "assign Doctor To Clinic",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/clinics/1/doctors/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"clinics",
+														"1",
+														"doctors",
+														"1"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/clinics/:clinicId/doctors/:doctorId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"clinics",
+																":clinicId",
+																"doctors",
+																":doctorId"
+															],
+															"variable": [
+																{
+																	"key": "clinicId"
+																},
+																{
+																	"key": "doctorId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"workingDays\": \"<string>\",\n  \"workingHours\": \"<string>\",\n  \"email\": \"<string>\",\n  \"socialLinks\": \"<string>\",\n  \"doctors\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    }\n  ]\n}"
+												}
+											]
+										},
+										{
+											"name": "deassign Doctor From Clinic",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/clinics/1/doctors/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"clinics",
+														"1",
+														"doctors",
+														"1"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/clinics/:clinicId/doctors/:doctorId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"clinics",
+																":clinicId",
+																"doctors",
+																":doctorId"
+															],
+															"variable": [
+																{
+																	"key": "clinicId"
+																},
+																{
+																	"key": "doctorId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"workingDays\": \"<string>\",\n  \"workingHours\": \"<string>\",\n  \"email\": \"<string>\",\n  \"socialLinks\": \"<string>\",\n  \"doctors\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    }\n  ]\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "doctors",
+							"item": [
+								{
+									"name": "get Clinic Doctors",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/clinics/1/doctors",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"clinics",
+												"1",
+												"doctors"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/clinics/:id/doctors",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"clinics",
+														":id",
+														"doctors"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"phone\": \"<string>\",\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"bio\": \"<string>\",\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    }\n  },\n  {\n    \"phone\": \"<string>\",\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"bio\": \"<string>\",\n    \"clinic\": {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"address\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"workingDays\": \"<string>\",\n      \"workingHours\": \"<string>\",\n      \"email\": \"<string>\",\n      \"socialLinks\": \"<string>\",\n      \"doctors\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n        }\n      ]\n    }\n  }\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get Clinic By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/clinics/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clinics",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/clinics/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"clinics",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"workingDays\": \"<string>\",\n  \"workingHours\": \"<string>\",\n  \"email\": \"<string>\",\n  \"socialLinks\": \"<string>\",\n  \"doctors\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "delete Clinic",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/clinics/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clinics",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/clinics/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"clinics",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "search",
+					"item": [
+						{
+							"name": "search By Phone Or Address",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/clinics/search?phone=015155&address=cairo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clinics",
+										"search"
+									],
+									"query": [
+										{
+											"key": "phone",
+											"value": "015155",
+											"description": "(Required) "
+										},
+										{
+											"key": "address",
+											"value": "cairo",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/clinics/search?phone=<string>&address=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"clinics",
+												"search"
+											],
+											"query": [
+												{
+													"key": "phone",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "address",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "get All Clinics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/clinics",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clinics"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/clinics",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clinics"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"address\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"workingDays\": \"<string>\",\n    \"workingHours\": \"<string>\",\n    \"email\": \"<string>\",\n    \"socialLinks\": \"<string>\",\n    \"doctors\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n      }\n    ]\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "update Clinic",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"workingDays\": \"<string>\",\n  \"workingHours\": \"<string>\",\n  \"email\": \"<string>\",\n  \"socialLinks\": \"<string>\",\n  \"doctors\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/clinics",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clinics"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"workingDays\": \"<string>\",\n  \"workingHours\": \"<string>\",\n  \"email\": \"<string>\",\n  \"socialLinks\": \"<string>\",\n  \"doctors\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/clinics",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clinics"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"workingDays\": \"<string>\",\n  \"workingHours\": \"<string>\",\n  \"email\": \"<string>\",\n  \"socialLinks\": \"<string>\",\n  \"doctors\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "add Clinic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \n  \"name\": \"clinic1\",\n  \"address\": \"cairo\",\n  \"phone\": \"015155\",\n  \"workingDays\": \"7\",\n  \"workingHours\": \"8\",\n  \"email\": \"asdasd@asda.asda\",\n  \"socialLinks\": \"asdasdasdad\"\n \n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/clinics",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clinics"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"workingDays\": \"<string>\",\n  \"workingHours\": \"<string>\",\n  \"email\": \"<string>\",\n  \"socialLinks\": \"<string>\",\n  \"doctors\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/clinics",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clinics"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"workingDays\": \"<string>\",\n  \"workingHours\": \"<string>\",\n  \"email\": \"<string>\",\n  \"socialLinks\": \"<string>\",\n  \"doctors\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Doctor detected>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
