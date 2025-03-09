@@ -60,5 +60,3 @@ Once the application is running, access Swagger UI for API documentation:
 4. **Use the predefined requests** to interact with the API.
 
 ---
-
-💡 *For any issues or contributions, feel free to submit a pull request or report bugs in the repository!*
